@@ -1,0 +1,20 @@
+type: remote_edu
+files:
+- name: main.js
+  visible: true
+  text: |-
+    console.log("Welcome to Currency Converter!")
+    let currency = new Map();
+    currency.set("USD", 1).set("JPY", 113.5).set("EUR", 0.89).set("RUB", 74.36).set("GBP", 0.75)
+    for (let [key, value] of currency) console.log(`1 USD equals  ${value} ${key}`);
+  learner_created: false
+- name: tests.py
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17898#comment
+check_profile: hyperskill_node_javascript
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 05 Jul 2022 16:18:59 UTC
+record: 1

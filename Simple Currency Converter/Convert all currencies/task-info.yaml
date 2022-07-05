@@ -1,0 +1,28 @@
+type: remote_edu
+files:
+- name: main.js
+  visible: true
+  text: "input = require('sync-input');\n\nfunction check_key_of_dict(dict, key_dict)\
+    \ {\n    for (let [key, value] of dict)\n        if (key != key_dict)\n      \
+    \      return false\n    \n    return true\n}\n\nconsole.log(\"Welcome to Currency\
+    \ Converter!\")\nlet currency = new Map();\ncurrency.set(\"USD\", 1).set(\"JPY\"\
+    , 113.5).set(\"EUR\", 0.89).set(\"RUB\", 74.36).set(\"GBP\", 0.75)\nfor (let [key,\
+    \ value] of currency) console.log(`1 USD equals  ${value} ${key}`);\nconsole.log(\"\
+    I can convert USD to these currencies: JPY, EUR, RUB, USD, GBP\")\nconsole.log(\"\
+    Type the currency you wish to convert: USD\")\n\n\nlet valute = input(\"To:\"\
+    ).toUpperCase();\nif (!check_key_of_dict(currency, valute)) {\n    console.log(\"\
+    Unknown currency\")\n    process.exit(1);\n}\n\nlet amount = Number(input(\"Amount:\"\
+    ))\nif (amount < 1) {\n    console.log(\"The amount cannot be less than 1\")\n\
+    \    process.exit(1);\n}\n\nconsole.log(`Result: ${amount} USD equals ${(amount\
+    \ / currencies[\"USD\"] * currencies[valute])} ${valute}`)"
+  learner_created: false
+- name: tests.py
+  visible: false
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/17899#comment
+check_profile: hyperskill_node_javascript
+status: Solved
+feedback:
+  message: <html>Correct solution</html>
+  time: Tue, 05 Jul 2022 16:34:04 UTC
+record: 3
